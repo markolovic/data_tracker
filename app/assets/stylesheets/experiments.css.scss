@@ -60,6 +60,32 @@ body{
 }
 
 
+.popup{
+	width: 90%;
+	height: 90%;
+	position: fixed;
+	top: 5%;
+	left: 5%;
+	z-index: 1000;
+	border: 1px solid #efefef;
+	background: #fafafa;
+
+	.title{
+		width: 90%;
+		margin-top: 2%;
+		margin-left: 5%;
+		border: 0;
+		border-bottom: 1px solid #272727;
+		font-size: 32px;
+		background: transparent;
+	}
+
+	.var{
+		margin-top: 20px;
+		margin-left: 10%;
+	}
+}
+
 
 
 
