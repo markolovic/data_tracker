@@ -1,1 +1,8 @@
-hello world
+<%= link_to 'hello world', root_path %>
+
+
+<% @experiments.each do |e| %>
+  <li>
+    <%= link_to e.name, e %>
+  </li>
+<% end %>
