@@ -7,10 +7,11 @@
 </div>
 
 <div class="content">
+    <% @experiments.each do |e| %>
     <div class="experiment">
         <div class="c2">
             <h2>
-                Coding efficiency.
+                 <%= link_to e.name, e %>
             </h2>
             <h5>
                 45th May 2015 - 21st July 2018
@@ -31,7 +32,7 @@
             </div>
         </div>
     </div> 
-
+    <% end %>
 </div>
 
 <%= link_to 'new experiment', new_experiment_path %>
