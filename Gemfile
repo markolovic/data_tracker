@@ -40,3 +40,4 @@ gem 'spring',        group: :development
 
 gem 'haml'
 gem 'knockoutjs-rails'
+gem 'chartist_js'
