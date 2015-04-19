@@ -6,15 +6,25 @@
 
 
 <h3>Independent vars</h3>
+<br />
 <ul>
 <% @experiment.independent_vars.all.each do |ind_var|%>
   <li>
   <%= "#{ind_var.name}:  #{ind_var.measurements.all.count} measurements (#{ind_var.mtype})" %>
+
+  <%= form_tag("independent_vars/edit/#{ind_var.id}", method: 'post') do %>
+    <%= number_field_tag(:value) %>
+    <%= submit_tag('Submit') %>
+  <% end %>
+
   </li>
 <% end %>
 </ul>
-
+<br />
+<br />
 <h3>Dependent vars</h3>
+<br />
 <% @experiment.dependent_vars.all.each do |dep_var|%>
   <%= dep_var.name %>
 <% end %>
+
