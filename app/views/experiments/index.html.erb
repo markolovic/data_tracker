@@ -1,4 +1,7 @@
 <div class="sidebar">
+    <h2>
+        My Experiments
+    </h2>
     <% @experiments.each do |e| %>
         <li>
             <%= link_to e.name, e %>
@@ -14,7 +17,7 @@
                  <%= link_to e.name, e %>
             </h2>
             <h5>
-              <%= e.created_at.strftime("%d %b. %Y") %> - present
+              <%= e.created_at.strftime("%d %b. %Y") %> - Present
             </h5>
             <h3>
                 Breakfast: &#10003;
