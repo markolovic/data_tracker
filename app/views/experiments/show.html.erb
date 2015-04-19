@@ -32,7 +32,7 @@
 			  <li>
 			  <%= "#{ind_var.name}:" %>
 
-			  <%= form_tag("independent_vars/edit/#{ind_var.id}", method: 'post') do %>
+			  <%= form_tag(independent_variable_path(ind_var), method: 'post') do %>
 			    <%= number_field_tag(:value) %>
 			    <%= submit_tag('Submit') %>
 			  <% end %>
