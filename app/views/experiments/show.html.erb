@@ -8,7 +8,7 @@
 		<div class="vars">
 			<h3>Dependent vars</h3>
 			<% @experiment.dependent_vars.all.each do |dep_var|%>
-			  <%= dep_var.name %>
+			  <li><%= dep_var.name %></li>
 			<% end %>
 		</div>
 		<div class="vars">
