@@ -27,6 +27,10 @@ h1,h2,h3,h4,h5,h6{
 	font-size: 20px;
 }
 
+.new:hover{
+	cursor: pointer;
+}
+
 .sidebar{
 	width: 20%;
 	height: 100vh;
@@ -62,9 +66,10 @@ h1,h2,h3,h4,h5,h6{
 	float: left;
 }
 .experiment{
-	height: 200px;
+	width: 90%;
 	margin: 20px 5% 0 5%;
 	border-bottom: 1px solid #efefef;
+	float: left;
 
 	h2{
 		width: 80%;
@@ -151,7 +156,8 @@ h1,h2,h3,h4,h5,h6{
 }
 
 
-
-
+.ct-chart{
+  width: 100%;
+}
 
 
