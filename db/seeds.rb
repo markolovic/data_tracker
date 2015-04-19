@@ -30,3 +30,7 @@ end
 [5,3,8,9,4,3,5,7,3].each do |i|
   dinner.measurements.create(value: i)
 end
+
+[4,3,2,9,9,3,2,1,3].each do |i|
+  tired.measurements.create(value: i)
+end
