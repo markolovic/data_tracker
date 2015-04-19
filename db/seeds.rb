@@ -1,5 +1,6 @@
 Experiment.delete_all
 IndependentVar.delete_all
+DependentVar.delete_all
 Measurement.delete_all
 
 sleep = Experiment.create(name: "Curva de Balmer")
@@ -15,16 +16,19 @@ dinner =  sleep.dependent_vars.create(name: "Cuanto he comido", mtype: "number")
 
 
 # Ind vars
-time =  running.independent_vars.create(name: "Cuanto he comido?", mtype: "number")
+itime =  running.independent_vars.create(name: "Cuanto he comido?", mtype: "number")
 #sleep.independent_vars << IndependentVar.create(name: "Wake up timee")
-tired = running.independent_vars.create(name: "Como de bien he corrido?	", mtype: "number")
+itired = running.independent_vars.create(name: "Como de bien he corrido?	", mtype: "number")
 
 # Dep vars
-dinner =  running.dependent_vars.create(name: "Dinner time", mtype: "number")
+idinner =  running.dependent_vars.create(name: "Dinner time", mtype: "number")
 
+arr = [4, 8, 2, 4, 0, 8, 6, 8, 5]
 
-[4,8,2,4,0,8,6,8,5].each do |i|
-  time.measurements.create(value: i)
+arr.each do |i|
+  #time.measurements.create(value: i)
+  time.measurements << Measurement.create(value: i)
+  time.save
 end
 
 [5,3,8,9,4,3,5,7,3].each do |i|
