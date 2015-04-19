@@ -108,6 +108,7 @@ h1,h2,h3,h4,h5,h6{
 		width: 90%;
 		margin-top: 2%;
 		margin-left: 5%;
+		margin-bottom: 50px;
 		border: 0;
 		border-bottom: 1px solid #272727;
 		font-size: 42px;
@@ -147,17 +148,42 @@ h1,h2,h3,h4,h5,h6{
 	margin: 10% 5% 0 5%;
 	border: 1px solid #bababa;
 	background: #eaeaea;
+}
 
-	h3{
+h3{
 		padding-top: 10px;
 		margin-left: 5%;
 		font-size: 26px;	
 	}
-}
-
 
 .ct-chart{
   width: 100%;
 }
 
+
+.show{
+	.ct-chart{
+		width: 90%;
+		height: 300px;
+		margin-left: 5%;
+	}
+
+	.c2{
+		box-sizing: border-box;
+	}
+
+	.vars{
+		margin-left: 5%;
+		border-bottom: 1px solid #efefef;
+	}
+
+	h3{
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}
+
+	li{
+		margin-bottom: 5px;
+	}
+}
 
