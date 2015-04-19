@@ -173,6 +173,7 @@ h3{
 	}
 
 	.vars{
+		width: 90%;
 		margin-left: 5%;
 		border-bottom: 1px solid #efefef;
 	}
@@ -184,6 +185,25 @@ h3{
 
 	li{
 		margin-bottom: 5px;
+		font-size: 20px;
 	}
+
+	.report{
+		li{
+			float: left;
+		}
+
+		form{
+			margin-left: 5px;
+			float: right;
+		}
+	}
+}
+
+#value{
+	border: 0;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #454545;
+	font-size: 20px;
 }
 
