@@ -4,4 +4,5 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   @experiments = Experiment.all
+  gon.experiments = Experiment.all
 end
