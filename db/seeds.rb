@@ -6,12 +6,12 @@ sleep = Experiment.create(name: "Sleep quality")
 running = Experiment.create(name: "Diet and Running")
 
 # Ind vars
-time =  sleep.independent_vars.create(name: "Wake up time")
+time =  sleep.independent_vars.create(name: "Wake up time", mtype: "number")
 #sleep.independent_vars << IndependentVar.create(name: "Wake up timee")
-tired = sleep.independent_vars.create(name: "Tired upong waking")
+tired = sleep.independent_vars.create(name: "Tired upong waking", mtype: "number")
 
 # Dep vars
-dinner =  sleep.dependent_vars.create(name: "Dinner time")
+dinner =  sleep.dependent_vars.create(name: "Dinner time", mtype: "number")
 
 (1..5).each do |i|
   time.measurements.create(value: i)
@@ -20,4 +20,3 @@ end
 (1..5).each do |i|
   dinner.measurements.create(value: i)
 end
-
