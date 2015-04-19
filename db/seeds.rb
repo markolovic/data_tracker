@@ -20,3 +20,4 @@ end
 (1..5).each do |i|
   dinner.measurements.create(value: i)
 end
+
