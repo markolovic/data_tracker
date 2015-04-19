@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150418121329) do
+ActiveRecord::Schema.define(version: 20150419084630) do
 
   create_table "experiments", force: true do |t|
     t.string   "name"
@@ -23,13 +23,22 @@ ActiveRecord::Schema.define(version: 20150418121329) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "experiment_id"
   end
+
+  add_index "independent_vars", ["experiment_id"], name: "index_independent_vars_on_experiment_id"
 
   create_table "measurements", force: true do |t|
     t.float    "value"
     t.string   "notes"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "independent_var_id"
+    t.integer  "variable_id"
+    t.string   "variable_type"
   end
+
+  add_index "measurements", ["independent_var_id"], name: "index_measurements_on_independent_var_id"
+  add_index "measurements", ["variable_id"], name: "index_measurements_on_variable_id"
 
 end
