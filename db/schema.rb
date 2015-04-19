@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150419085814) do
+ActiveRecord::Schema.define(version: 20150419094823) do
 
   create_table "dependent_vars", force: true do |t|
     t.string   "name"
     t.integer  "experiment_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "type"
   end
 
   add_index "dependent_vars", ["experiment_id"], name: "index_dependent_vars_on_experiment_id"
@@ -33,6 +34,7 @@ ActiveRecord::Schema.define(version: 20150419085814) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "experiment_id"
+    t.string   "type"
   end
 
   add_index "independent_vars", ["experiment_id"], name: "index_independent_vars_on_experiment_id"
@@ -45,6 +47,7 @@ ActiveRecord::Schema.define(version: 20150419085814) do
     t.integer  "independent_var_id"
     t.integer  "variable_id"
     t.string   "variable_type"
+    t.string   "type"
   end
 
   add_index "measurements", ["independent_var_id"], name: "index_measurements_on_independent_var_id"
