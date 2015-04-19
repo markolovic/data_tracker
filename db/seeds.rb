@@ -9,10 +9,10 @@ running = Experiment.create(name: "Comer antes de correr")
 # Ind vars
 time =  sleep.independent_vars.create(name: "Cervezas", mtype: "number")
 #sleep.independent_vars << IndependentVar.create(name: "Wake up timee")
-tired = sleep.independent_vars.create(name: "Eficiencia al programar", mtype: "number")
+tired = sleep.dependent_vars.create(name: "Eficiencia al programar", mtype: "number")
 
 # Dep vars
-dinner =  sleep.dependent_vars.create(name: "Cuanto he comido", mtype: "number")
+#dinner =  sleep.dependent_vars.create(name: "Cuanto he comido", mtype: "number")
 
 
 # Ind vars
