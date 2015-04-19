@@ -7,44 +7,36 @@ jQuery(document).ready(function($) {
 		$('.popup').hide();
 	});
 
+var dayArr = []
+
+function days() {
+	
+	c = 0
+
+	for (var i = gon.dep_vars[0].length - 1; i >= 0; i--) {
+		
+		c +=1
+		dayArr[i] = "Day" + c
+	}
+}
+function chartist(array) {
 	new Chartist.Line('.ct-chart', {
-	  labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+	  labels: array,
 	  series: [
 	    {
 	      name: gon.dep_vars[0].name,
-	      data: [1, 2, 3, 5, 7, 9, 10]
+	      data: gon.dep_vars[0]
 	    },
 	    {
 	      name: gon.ind_vars[0].name,
-	      data: [5, 6, 7.5, 9, 5, 3, 0]
+	      data: gon.ind_vars[0]
 	    }
 	  ]
 	});
+}
 
-	var $chart = $('.ct-chart');
 
-	var $toolTip = $chart
-	  .append('<div class="tooltip"></div>')
-	  .find('.tooltip')
-	  .hide();
-
-	$chart.on('mouseenter', '.ct-point', function() {
-	  var $point = $(this),
-	    value = $point.attr('ct:value'),
-	    seriesName = $point.parent().attr('ct:series-name');
-	  $toolTip.html(seriesName + '<br>' + value).show();
-	});
-
-	$chart.on('mouseleave', '.ct-point', function() {
-	  $toolTip.hide();
-	});
-
-	$chart.on('mousemove', function(event) {
-	  $toolTip.css({
-	    left: (event.offsetX || event.originalEvent.layerX) - $toolTip.width() / 2 - 10,
-	    top: (event.offsetY || event.originalEvent.layerY) - $toolTip.height() - 40
-	  });
-});	
-
+days();
+chartist(dayArr)
 });
 
