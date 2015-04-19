@@ -1,0 +1,21 @@
+<div class="form popup">
+	<input class="title" type="text" value="" placeholder="Name of Experiment">
+	<div class="c2">
+		<div class="box">
+			<h3>
+				Input variables
+			</h3>
+			<% @experiment.independent_vars.all.each do |ind_var|%>
+  				<%= ind_var.name %>
+			<% end %>
+		</div>
+	</div>
+	<div class="c2">
+		<div class="box">
+			<h3>
+				Independent variables
+			</h3>
+
+		</div>
+	</div>
+</div>

@@ -12,6 +12,10 @@ a{
 	text-decoration: none;
 }
 
+h1,h2,h3,h4,h5,h6{
+	font-weight: normal;
+}
+
 .c2{
 	width: 50%;
 	float: left;
@@ -26,19 +30,24 @@ a{
 	h2{
 		font-size: 26px;
 		padding-top: 30px;
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 		text-decoration: underline;
 		text-align: center;
 	}
 
 	li{
-		margin-left: 5%;
-		margin-bottom: 10px;
+		margin-left: 15%;
+		margin-bottom: 5px;
 		list-style-type: none;
+		font-size: 18px;
 	}
 
 	li:before{
 		content: "- "
+	}
+
+	li:hover{
+		text-decoration: underline;
 	}
 }
 
@@ -70,6 +79,7 @@ a{
 		margin: 0 0 5px 2%;
 		float: left;
 		font-size: 20px;
+		font-weight: lighter;
 	}
 
 	h3:first-of-type{
@@ -118,7 +128,8 @@ a{
 
 	h3{
 		padding-top: 10px;
-		font-size: 24px;
+		margin-left: 5%;
+		font-size: 26px;	
 	}
 }
 
