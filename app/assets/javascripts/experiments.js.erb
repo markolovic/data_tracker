@@ -8,19 +8,15 @@ jQuery(document).ready(function($) {
 	});
 
 	new Chartist.Line('.ct-chart', {
-	  labels: ['1', '2', '3', '4', '5', '6'],
+	  labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
 	  series: [
 	    {
-	      name: 'Fibonacci sequence',
-	      data: [1, 2, 3, 5, 8, 13]
+	      name: 'Beers',
+	      data: [1, 2, 3, 5, 7, 9, 10]
 	    },
 	    {
-	      name: 'Golden section',
-	      data: [1, 1.618, 2.618, 4.236, 6.854, 11.09]
-	    },
-	    {
-	    	name: 'Poopy pot',
-	    	data: [1,2,5,7,8,1]
+	      name: 'Code efficiency',
+	      data: [5, 6, 7.5, 9, 5, 3, 0]
 	    }
 	  ]
 	});
@@ -48,7 +44,7 @@ jQuery(document).ready(function($) {
 	    left: (event.offsetX || event.originalEvent.layerX) - $toolTip.width() / 2 - 10,
 	    top: (event.offsetY || event.originalEvent.layerY) - $toolTip.height() - 40
 	  });
-});
+});	
 
 });
 
