@@ -23,10 +23,10 @@ tired = running.independent_vars.create(name: "Como de bien he corrido?	", mtype
 dinner =  running.dependent_vars.create(name: "Dinner time", mtype: "number")
 
 
-(1..5).each do |i|
+[4,8,2,4,0,8,6,8,5].each do |i|
   time.measurements.create(value: i)
 end
 
-(1..5).each do |i|
+[5,3,8,9,4,3,5,7,3].each do |i|
   dinner.measurements.create(value: i)
 end
